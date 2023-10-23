@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+
+  app:
+    # Build
+    image: coucouc.acr.io/ertyui:latest
+    build:
+      context: ..
+      dockerfile: from/Dockerfile
+    # Deploy
+    ports:
+      - "5000:80"
